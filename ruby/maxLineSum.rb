@@ -1,6 +1,7 @@
 =begin
-
-Given a triangle with n rows, find the maximum total sum for a path leading from the topmost node to the bottom row.
+Description:
+Given a triangle with n rows, find the maximum total sum
+for a path leading from the topmost node to the bottom row.
 
 For example:
 
@@ -28,7 +29,7 @@ def maxLine(t)
       # replace each node with max sum of it's children
       leftSum = t[r][c] + t[r+1][c]
       rightSum = t[r][c] + t[r+1][c+1]
-      t[r][c] = [ leftSum, rightSum ].max
+      t[r][c] = [leftSum, rightSum].max
     end
     t.slice(0..r) # cut last row
   }
